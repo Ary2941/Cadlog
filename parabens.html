@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de login</title>
+</head>
+<body>
+    <p>parabéns, <span id="nomeUsuario"></span>,</p>
+    <p>Login feito com sucesso!</p>
+    <a href="/">Sair da conta</a>
+
+    <script>
+        // Captura o nome do usuário da URL e exibe na página
+        const params = new URLSearchParams(window.location.search);
+        const nomeUsuario = params.get('nome');
+        document.getElementById('nomeUsuario').innerText = nomeUsuario;
+    </script>
+</body>
+</html>

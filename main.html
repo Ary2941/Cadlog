@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Cadastro</title>
+    <style>
+        .oculto {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <script src="functions.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
+    <form id="cadastroForm" class="oculto">
+        <h2>Criar conta com Google</h2>
+        <h4>ou</h4>
+        <label for="cadastroUsuario">Usuário:</label>
+        <input type="text" id="cadastroUsuario" name="cadastroUsuario" required>
+
+        <label for="cadastroSenha">Senha:</label>
+        <input type="password" id="cadastroSenha" name="cadastroSenha" required>
+
+        <label for="confirmaSenha">Confirmação de Senha:</label>
+        <input type="password" id="confirmaSenha" name="confirmaSenha" required>
+
+        <button type="button" onclick="cadastrar()">Criar conta</button>
+        <p> Já tem uma conta? <a type="href" onclick="alternarFormularios()">acesse-a</a> </p>
+        
+    </form>
+
+    <form id="loginForm">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <h2>Login com Google</h2>
+        <h4>ou</h4>
+        <label for="loginUsuario">Usuário:</label>
+        <input type="text" id="loginUsuario" name="loginUsuario" required>
+
+        <label for="loginSenha">Senha:</label>
+        <input type="password" id="loginSenha" name="loginSenha" required>
+
+        <button type="button" onclick="login()">Login</button>
+        <p> Não tem uma conta? <a type="href" onclick="alternarFormularios()">crie uma conta</a> </p>
+
+    </form>
+</body>
+</html>
